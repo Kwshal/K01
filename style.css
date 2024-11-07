@@ -1,0 +1,254 @@
+body {
+     font-family: 'Arial', sans-serif;
+     line-height: 1.6;
+     color: #333;
+     margin: 0 auto;
+     padding: 20px;
+     background-color: #f5f5f5;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     height: 100vh;
+}
+
+#locationApp {
+     position: relative;
+     top: 100px;
+     background-color: #fff;
+     width: clamp(300px, 100%, 300px);
+     padding: 20px;
+     border-radius: 5px;
+     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+h2,
+h3 {
+     color: #333;
+     margin-bottom: 15px;
+     font-size: 24px;
+     font-weight: 600;
+}
+
+form {
+     display: flex;
+     flex-direction: column;
+     gap: 15px;
+     margin-bottom: 20px;
+     position: relative;
+}
+
+label {
+     font-weight: 550;
+     font-size: 14px;
+     color: #555;
+}
+
+input[type="text"] {
+     padding: 8px;
+     font-size: 14px;
+     border: 1px solid #ccc;
+     border-radius: 4px;
+}
+
+input[type="text"]:focus {
+     border-color: #666;
+     outline: none;
+}
+
+input[type="text"]::placeholder {
+     color: #999;
+     font-style: italic;
+     font-family: monospace;
+}
+
+
+button {
+     background-color: #4a90e2;
+     color: #fff;
+     padding: 8px 12px;
+     font-size: 14px;
+     border: none;
+     border-radius: 4px;
+     cursor: pointer;
+}
+
+button:hover {
+     background-color: #3a7bc8;
+}
+
+hr {
+     border: none;
+     border-top: 1px dashed #ccc;
+     margin: 20px 0;
+}
+
+#savedLocations {
+     margin-top: 15px;
+}
+
+#locationList {
+     /* list-style: none; */
+     padding: 0;
+     margin: 0;
+}
+
+.location-chunk {
+     background-color: #f8f8f8;
+     padding: 10px;
+     margin-bottom: 8px;
+     border-radius: 4px;
+     cursor: pointer;
+}
+
+.location-summary {
+     font-size: 14px;
+}
+
+.location-path {
+     font-size: 12px;
+     color: #666;
+     margin-top: 5px;
+     display: none;
+}
+
+.location-chunk.expanded .location-path {
+     display: block;
+}
+
+.location-card {
+     flex: 0 0 auto;
+     width: 200px;
+     background-color: #fff;
+     padding: 15px;
+     border-radius: 5px;
+     border: 1px solid #ddd;
+     font-size: 14px;
+     position: relative;
+}
+
+table {
+     width: 100%;
+     border-collapse: collapse;
+}
+
+th,
+td {
+     padding: 10px;
+     text-align: left;
+     border-bottom: 1px solid #ddd;
+     font-size: 14px;
+}
+
+th {
+     background-color: #f5f5f5;
+     font-weight: 600;
+}
+
+@media (max-width: 600px) {
+     body {
+          padding: 10px;
+     }
+
+     #locationApp {
+          padding: 15px;
+     }
+
+     .location-card {
+          width: 200px;
+     }
+}
+
+.delete-btn {
+     cursor: pointer;
+     display: inline-block;
+     width: 16px;
+     height: 16px;
+     position: absolute;
+     top: 5px;
+     right: 5px;
+     background-color: #e74c3c;
+     border-radius: 50%;
+}
+
+.delete-btn::before,
+.delete-btn::after {
+     content: '';
+     position: absolute;
+     width: 70%;
+     height: 2px;
+     background-color: #fff;
+     top: 50%;
+     left: 15%;
+}
+
+.delete-btn::before {
+     transform: rotate(45deg);
+}
+
+.delete-btn::after {
+     transform: rotate(-45deg);
+}
+
+.tooltip {
+     position: relative;
+     display: inline-block;
+     cursor: help;
+     margin-left: 5px;
+     vertical-align: middle;
+}
+
+.tooltip .tooltiptext {
+     visibility: hidden;
+     width: 200px;
+     background-color: #555;
+     color: #fff;
+     text-align: center;
+     border-radius: 4px;
+     padding: 5px;
+     position: absolute;
+     z-index: 1;
+     bottom: 125%;
+     left: 50%;
+     transform: translateX(-50%);
+     opacity: 0;
+     transition: opacity 0.3s, visibility 0.3s;
+}
+
+.tooltip:hover .tooltiptext {
+     visibility: visible;
+     opacity: 1;
+}
+
+.location-card h4 {
+     margin-top: 0;
+     margin-bottom: 10px;
+     color: #333;
+     font-size: 16px;
+}
+
+.location-card p {
+     margin: 5px 0;
+     color: #555;
+}
+
+.location-card .delete-btn {
+     margin-top: 0;
+}
+
+.input-wrapper {
+     position: relative;
+     display: flex;
+     align-items: center;
+     gap: 5px;
+     width: 100%;
+}
+
+#locationInput {
+     flex: 1;
+     min-width: 0;
+     padding: 8px;
+}
+
+button[type="submit"] {
+     flex-shrink: 0;
+}

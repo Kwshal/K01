@@ -1,0 +1,10 @@
+     <!-- Locate in 0s (left) and 1s (right) -->
+
+     <!-- Origin my Home K. SubOrigin Smn Home S -->
+     <!-- Example: My home to Smn's is K0 -->
+
+     <!-- Format: <Location A>: <Path>: <Location B> -->
+     <!-- Locations can be a checkpoint -->
+     <!-- Checkpoints can have origins at different points -->
+
+     <!-- Dictionary of checkpoint terms -->
