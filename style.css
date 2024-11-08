@@ -361,26 +361,26 @@ button[type="submit"] {
 
 #locationList li:nth-child(n) {
      border-left: 5px solid var(--dark-sky-blue);
-     background-color: var(--light-sky-blue);
+     /* background-color: var(--light-sky-blue); */
 
 }
 
 #locationList li:nth-child(2n) {
      border-left: 5px solid var(--dark-green);
-     background-color: var(--pale-green);
+     /* background-color: var(--pale-green); */
 
 
 }
 
 #locationList li:nth-child(3n) {
      border-left: 5px solid var(--dark-lavender);
-     background-color: var(--lavender-blush);
+     /* background-color: var(--lavender-blush); */
 
 }
 
 #locationList li:nth-child(4n) {
      border-left: 5px solid var(--dark-peach);
      /* Dark left border */
-     background-color: var(--peach-puff);
+     /* background-color: var(--peach-puff); */
      /* Lighter background */
 }
