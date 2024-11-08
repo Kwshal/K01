@@ -61,7 +61,6 @@ input[type="text"]::placeholder {
      font-family: monospace;
 }
 
-
 button {
      background-color: #4a90e2;
      color: #fff;
@@ -83,21 +82,66 @@ hr {
 }
 
 #savedLocations {
+     height: 300px;
      margin-top: 15px;
+     scrollbar-width: thin;
+     overflow-y: auto;
 }
 
 #locationList {
-     /* list-style: none; */
      padding: 0;
      margin: 0;
 }
 
 .location-chunk {
-     background-color: #f8f8f8;
-     padding: 10px;
-     margin-bottom: 8px;
-     border-radius: 4px;
-     cursor: pointer;
+     background-color: whitesmoke;
+     border-radius: 0px;
+     padding: 5px;
+     display: inline-block;
+     max-width: 100%;
+     width: 100%;
+     box-sizing: border-box;
+     margin-bottom: 5px;
+}
+
+.location-text {
+     white-space: nowrap;
+     overflow: hidden;
+     text-overflow: ellipsis;
+}
+
+.input-wrapper {
+     position: relative;
+     display: flex;
+     align-items: center;
+     max-width: 100%;
+     justify-content: space-between;
+}
+
+#locationInput {
+     padding-right: 30px;
+}
+
+#locationInputLabel .tooltiptext {
+     visibility: hidden;
+     width: 200px;
+     background-color: #555;
+     color: #fff;
+     text-align: center;
+     border-radius: 6px;
+     padding: 5px;
+     position: absolute;
+     z-index: 1;
+     bottom: 125%;
+     left: 50%;
+     margin-left: -100px;
+     opacity: 0;
+     transition: opacity 0.3s;
+}
+
+#locationInputLabel:hover .tooltiptext {
+     visibility: visible;
+     opacity: 1;
 }
 
 .location-summary {
