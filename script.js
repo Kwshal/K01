@@ -1,5 +1,5 @@
 function getDirections(code) {
-    var list = ["0", "1", "R", "r", "L", "l", "a","A", "b", "B", "c", "C", "d", "D", "e", "s"];
+    var list = ["0", "1", "R", "r", "L", "l", "a", "A", "b", "B", "c", "C", "d", "D", "e", "s"];
     const directions = {
         '0': 'first left',
         '1': 'first right',

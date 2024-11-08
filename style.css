@@ -1,3 +1,17 @@
+:root {
+     --light-sky-blue: #87CEFA;
+     --pale-green: #98FB98;
+     --lavender-blush: #FFF0F5;
+     --peach-puff: #FFDAB9;
+
+     --dark-sky-blue: #4682B4;
+     --dark-green: #006400;
+     --dark-lavender: #734F96;
+     --dark-peach: #CD853F;
+}
+
+
+
 body {
      font-family: 'Arial', sans-serif;
      line-height: 1.6;
@@ -13,9 +27,9 @@ body {
 
 #locationApp {
      position: relative;
-     top: 100px;
+     top: 10px;
      background-color: #fff;
-     width: clamp(300px, 100%, 300px);
+     width: clamp(250px, 100%, 250px);
      padding: 20px;
      border-radius: 5px;
      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
@@ -33,7 +47,7 @@ form {
      display: flex;
      flex-direction: column;
      gap: 15px;
-     margin-bottom: 20px;
+     margin-bottom: 5px;
      position: relative;
 }
 
@@ -77,32 +91,40 @@ button:hover {
 
 hr {
      border: none;
+     display: none;
      border-top: 1px dashed #ccc;
      margin: 20px 0;
 }
 
 #savedLocations {
      height: 300px;
-     margin-top: 15px;
+     /* margin-top: 15px; */
      scrollbar-width: thin;
      overflow-y: auto;
 }
 
 #locationList {
+     display: flex;
+     flex-direction: column;
+     gap: 2px;
      padding: 0;
      margin: 0;
 }
 
 .location-chunk {
      background-color: whitesmoke;
-     border-radius: 0px;
+     border: 1px solid whitesmoke;
+     color: #707070;
+     border-radius: 5px;
      padding: 5px;
      display: inline-block;
      max-width: 100%;
      width: 100%;
      box-sizing: border-box;
-     margin-bottom: 5px;
+     /* margin-bottom: 5px; */
 }
+
+
 
 .location-text {
      white-space: nowrap;
@@ -119,7 +141,7 @@ hr {
 }
 
 #locationInput {
-     padding-right: 30px;
+     padding-right: 10px;
 }
 
 #locationInputLabel .tooltiptext {
@@ -151,19 +173,19 @@ hr {
 .location-path {
      font-size: 12px;
      color: #666;
-     margin-top: 5px;
+     /* margin-top: 5px; */
      display: none;
 }
 
 .location-chunk.expanded .location-path {
-     display: block;
+     display: inline;
 }
 
 .location-card {
      flex: 0 0 auto;
      width: 200px;
      background-color: #fff;
-     padding: 15px;
+     padding: 5px;
      border-radius: 5px;
      border: 1px solid #ddd;
      font-size: 14px;
@@ -190,15 +212,15 @@ th {
 
 @media (max-width: 600px) {
      body {
-          padding: 10px;
+          padding: 0px;
      }
 
      #locationApp {
-          padding: 15px;
+          padding: 5px;
      }
 
      .location-card {
-          width: 200px;
+          width: 100%;
      }
 }
 
@@ -295,4 +317,70 @@ th {
 
 button[type="submit"] {
      flex-shrink: 0;
+}
+
+/* Hide scrollbar track and buttons for WebKit browsers (Chrome, Safari, Opera) */
+::-webkit-scrollbar {
+     width: 8px;
+     /* Adjust the width as needed */
+     height: 8px;
+     /* For horizontal scrollbar */
+}
+
+::-webkit-scrollbar-track {
+     background: transparent;
+     /* Hide the track */
+}
+
+::-webkit-scrollbar-thumb {
+     background-color: #888;
+     /* Color of the thumb */
+     border-radius: 10px;
+     /* Rounded corners */
+     border: 2px solid transparent;
+     /* Add space around thumb */
+}
+
+::-webkit-scrollbar-button {
+     display: none;
+     /* Hide the scrollbar buttons */
+}
+
+/* Hide scrollbar track and buttons for Firefox */
+* {
+     scrollbar-width: thin;
+     /* Make scrollbar thin */
+     scrollbar-color: #888 transparent;
+     /* Thumb color and track color */
+}
+
+*::-webkit-scrollbar-button {
+     display: none;
+     /* Hide the scrollbar buttons */
+}
+
+#locationList li:nth-child(n) {
+     border-left: 5px solid var(--dark-sky-blue);
+     background-color: var(--light-sky-blue);
+
+}
+
+#locationList li:nth-child(2n) {
+     border-left: 5px solid var(--dark-green);
+     background-color: var(--pale-green);
+
+
+}
+
+#locationList li:nth-child(3n) {
+     border-left: 5px solid var(--dark-lavender);
+     background-color: var(--lavender-blush);
+
+}
+
+#locationList li:nth-child(4n) {
+     border-left: 5px solid var(--dark-peach);
+     /* Dark left border */
+     background-color: var(--peach-puff);
+     /* Lighter background */
 }

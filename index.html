@@ -14,10 +14,10 @@
           <form id="locationForm">
                <div class="input-wrapper">
                     <input type="text" id="locationInput" placeholder="Enter location (A: Path: B)">
-                    <button type="submit">+</button>
+                    <!-- <button type="submit">+</button> -->
                </div>
           </form>
-          <hr>
+          <!-- <hr> -->
 
           <div id="savedLocations">
                <ol id="locationList">
@@ -102,9 +102,18 @@
                               const chunk = document.createElement('li');
                               chunk.className = 'location-chunk';
                               chunk.innerHTML = `
-                                   <div class="location-summary">${location.locationA} → ${location.locationB}</div>
-                                   <div class="location-path">Path: ${location.path}</div>
+                                   <div class="location-summary">
+                                   ${location.locationA}
+                                   <div class="location-path"> → ${location.path}</div>
+                                   → ${location.locationB}
+                                   </div>
                               `;
+                              chunk.addEventListener('dblclick', () => {
+                                   const locationRef = ref(database, 'locations/' + key);
+                                   remove(locationRef);
+                                   // deleteLocationFromFirebase(key);
+                                   chunk.remove(); // Optionally remove the chunk from the UI immediately
+                              });
 
                               chunk.addEventListener('click', () => {
                                    chunk.classList.toggle('expanded');
