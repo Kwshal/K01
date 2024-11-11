@@ -8,3 +8,24 @@
      <!-- Checkpoints can have origins at different points -->
 
      <!-- Dictionary of checkpoint terms -->
+
+!! 1 street = 20px
+
+
+"path maker in canvas" !!
+
+01 = 2nd right
+2 = 2 rights
+
+-1 1 -1 -0 +0
+
+ -n  n  = nl nr
+-0n 0n  = nthl nthr
+
+n = n turns // 
+0n = nth turn 
+0n. = nth turn stopper
+0n.0 = nth turn stopper continuer
+
++ extra skip
+- stopper
